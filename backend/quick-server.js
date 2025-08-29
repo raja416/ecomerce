@@ -341,12 +341,30 @@ app.post('/api/auth/register', (req, res) => {
 app.post('/api/auth/login', (req, res) => {
   const { email, password } = req.body;
   
-  // Mock login
+  // Check for admin credentials
+  if (email === 'arin@gmail.com' && password === 'Arin@123') {
+    return res.status(200).json({
+      success: true,
+      data: {
+        user: {
+          id: 1,
+          name: 'Admin User',
+          email: 'arin@gmail.com',
+          role: 'admin',
+          isEmailVerified: true
+        },
+        token: 'mock-jwt-token'
+      },
+      message: 'Admin login successful'
+    });
+  }
+  
+  // Regular user login (accept any other email/password)
   res.status(200).json({
     success: true,
     data: {
       user: {
-        id: 1,
+        id: 2,
         name: 'Test User',
         email,
         role: 'user',
@@ -355,6 +373,23 @@ app.post('/api/auth/login', (req, res) => {
       token: 'mock-jwt-token'
     },
     message: 'Login successful'
+  });
+});
+
+// Get current user
+app.get('/api/auth/me', (req, res) => {
+  // Mock current user (you can enhance this with token validation)
+  res.status(200).json({
+    success: true,
+    data: {
+      user: {
+        id: 1,
+        name: 'Admin User',
+        email: 'arin@gmail.com',
+        role: 'admin',
+        isEmailVerified: true
+      }
+    }
   });
 });
 

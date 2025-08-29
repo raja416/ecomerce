@@ -1,0 +1,31 @@
+{
+  "name": "ecommerce-full-stack",
+  "version": "1.0.0",
+  "description": "Full-stack eCommerce application with React frontend and Node.js backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "./start-project.sh",
+    "start:quick": "./start-project.sh --quick",
+    "dev": "./start-project.sh",
+    "dev:quick": "./start-project.sh --quick",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "backend": "cd backend && npm start",
+    "backend:quick": "cd backend && USE_QUICK_SERVER=true npm start",
+    "frontend": "cd frontend && npm start",
+    "setup": "cd backend && npm run setup"
+  },
+  "keywords": [
+    "ecommerce",
+    "react",
+    "nodejs",
+    "express",
+    "mysql",
+    "fullstack"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

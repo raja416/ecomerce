@@ -1,0 +1,59 @@
+{
+  "name": "ecommerce-frontend",
+  "version": "1.0.0",
+  "description": "eCommerce Frontend",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.{js,jsx}",
+    "lint:fix": "eslint src/**/*.{js,jsx} --fix"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "axios": "^0.27.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.4",
+    "react-scripts": "4.0.3",
+    "@react-spring/web": "^9.4.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:5000",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ecommerce-frontend.git"
+  },
+  "keywords": [
+    "react",
+    "ecommerce",
+    "frontend",
+    "shopping"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

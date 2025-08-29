@@ -159,11 +159,11 @@ const AdminPanel = () => {
       const email = form.email.value;
       const password = form.password.value;
       
-      if (email === 'admin@example.com' && password === 'admin123') {
+      if (email === 'arin@gmail.com' && password === 'Arin@123') {
         setIsAuthenticated(true);
         // Smooth transition - no alert
       } else {
-        alert('Invalid credentials. Use admin@example.com / admin123');
+        alert('Invalid credentials. Use arin@gmail.com / Arin@123');
       }
     };
 
@@ -181,7 +181,7 @@ const AdminPanel = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="admin@example.com"
+                placeholder="Enter email"
                 required
               />
             </div>
@@ -191,7 +191,7 @@ const AdminPanel = () => {
               <input
                 type="password"
                 name="password"
-                placeholder="admin123"
+                placeholder="Enter password"
                 required
               />
             </div>
@@ -203,8 +203,8 @@ const AdminPanel = () => {
           
           <div className="login-help">
             <p><strong>Demo Credentials:</strong></p>
-            <p>Email: admin@example.com</p>
-            <p>Password: admin123</p>
+            <p>Email: arin@gmail.com</p>
+            <p>Password: Arin@123</p>
           </div>
         </div>
       </div>
@@ -484,7 +484,7 @@ const AdminPanel = () => {
         <h3>🔐 Account Settings</h3>
         <div className="setting-item">
           <label>Admin Email:</label>
-          <input type="email" defaultValue="admin@example.com" />
+          <input type="email" defaultValue="arin@gmail.com" />
         </div>
         <div className="setting-item">
           <label>Password:</label>

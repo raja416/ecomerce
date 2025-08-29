@@ -159,15 +159,11 @@ const AdminPanel = () => {
       const email = form.email.value;
       const password = form.password.value;
       
-      console.log('Login attempt:', { email, password });
-      
       if (email === 'arin@gmail.com' && password === 'Arin@123') {
-        console.log('Login successful!');
         setIsAuthenticated(true);
         // Smooth transition - no alert
       } else {
-        console.log('Login failed!');
-        alert('Invalid credentials. Use arin@gmail.com / Arin@123');
+        alert('Invalid credentials. Please try again.');
       }
     };
 
@@ -206,9 +202,15 @@ const AdminPanel = () => {
           </form>
           
           <div className="login-help">
-            <p><strong>Demo Credentials:</strong></p>
-            <p>Email: arin@gmail.com</p>
-            <p>Password: Arin@123</p>
+            <p><strong>Admin Access Required</strong></p>
+            <p>Please contact your system administrator for credentials.</p>
+            {process.env.NODE_ENV === 'development' && (
+              <div style={{marginTop: '10px', padding: '10px', backgroundColor: '#f0f0f0', borderRadius: '5px'}}>
+                <p><strong>Development Mode:</strong></p>
+                <p>Email: arin@gmail.com</p>
+                <p>Password: Arin@123</p>
+              </div>
+            )}
           </div>
         </div>
       </div>

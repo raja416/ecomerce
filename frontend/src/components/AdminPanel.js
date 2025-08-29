@@ -159,10 +159,14 @@ const AdminPanel = () => {
       const email = form.email.value;
       const password = form.password.value;
       
+      console.log('Login attempt:', { email, password });
+      
       if (email === 'arin@gmail.com' && password === 'Arin@123') {
+        console.log('Login successful!');
         setIsAuthenticated(true);
         // Smooth transition - no alert
       } else {
+        console.log('Login failed!');
         alert('Invalid credentials. Use arin@gmail.com / Arin@123');
       }
     };

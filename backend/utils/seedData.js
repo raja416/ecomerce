@@ -795,8 +795,8 @@ const productsData = [
 const usersData = [
   {
     name: 'Admin User',
-    email: 'admin@ecommerce.com',
-    password: 'Admin123!',
+    email: 'arin@gmail.com',
+    password: 'Arin@123',
     role: 'admin',
     isEmailVerified: true,
     isActive: true
@@ -916,8 +916,8 @@ const seedData = async () => {
     console.log(`- ${products.length} products`);
     console.log(`- ${usersData.length} users (including admin and vendor)`);
     console.log('\nAdmin credentials:');
-    console.log('Email: admin@ecommerce.com');
-    console.log('Password: Admin123!');
+    console.log('Email: arin@gmail.com');
+    console.log('Password: Arin@123');
     console.log('\nRegular user credentials:');
     console.log('Email: john@example.com');
     console.log('Password: User123!');

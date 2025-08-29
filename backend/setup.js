@@ -28,10 +28,10 @@ const createAdminUser = async () => {
       return adminExists;
     }
 
-    const hashedPassword = await bcrypt.hash('admin123', 12);
+    const hashedPassword = await bcrypt.hash('Arin@123', 12);
     const adminUser = await User.create({
       name: 'Admin User',
-      email: 'admin@example.com',
+      email: 'arin@gmail.com',
       password: hashedPassword,
       role: 'admin',
       isEmailVerified: true,
@@ -239,8 +239,8 @@ const setup = async () => {
     
     console.log('Setup completed successfully!');
     console.log('\nAdmin credentials:');
-    console.log('Email: admin@example.com');
-    console.log('Password: admin123');
+    console.log('Email: arin@gmail.com');
+    console.log('Password: Arin@123');
     console.log('\nSample coupon codes:');
     console.log('WELCOME20 - 20% off (min $50)');
     console.log('SAVE10 - $10 off (min $25)');

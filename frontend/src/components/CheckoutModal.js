@@ -39,46 +39,46 @@ const CheckoutModal = ({ isOpen, onClose, cart, onCheckout }) => {
       <div className="checkout-modal">
         <button className="close-button" onClick={onClose}>
           ✕
-        </button>
+            </button>
 
         <div className="checkout-header">
-          <h2>Checkout</h2>
+              <h2>Checkout</h2>
           <div className="step-indicator">
             <span className={`step ${step >= 1 ? 'active' : ''}`}>1</span>
             <span className="step-line"></span>
             <span className={`step ${step >= 2 ? 'active' : ''}`}>2</span>
             <span className="step-line"></span>
             <span className={`step ${step >= 3 ? 'active' : ''}`}>3</span>
-          </div>
-        </div>
+              </div>
+            </div>
 
         <div className="checkout-content">
-          {step === 1 && (
-            <div className="checkout-step">
-              <h3>Shipping Information</h3>
+              {step === 1 && (
+                <div className="checkout-step">
+                  <h3>Shipping Information</h3>
               <form onSubmit={(e) => { e.preventDefault(); setStep(2); }}>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>First Name</label>
-                    <input
-                      type="text"
+                    <div className="form-row">
+                      <div className="form-group">
+                        <label>First Name</label>
+                        <input
+                          type="text"
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label>Last Name</label>
-                    <input
-                      type="text"
+                          required
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label>Last Name</label>
+                        <input
+                          type="text"
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                </div>
+                          required
+                        />
+                      </div>
+                    </div>
 
                 <div className="form-group">
                   <label>Email</label>
@@ -102,110 +102,110 @@ const CheckoutModal = ({ isOpen, onClose, cart, onCheckout }) => {
                   />
                 </div>
 
-                <div className="form-group">
-                  <label>Address</label>
-                  <input
-                    type="text"
+                    <div className="form-group">
+                      <label>Address</label>
+                      <input
+                        type="text"
                     name="address"
                     value={formData.address}
                     onChange={handleInputChange}
-                    required
-                  />
-                </div>
+                        required
+                      />
+                    </div>
 
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>City</label>
-                    <input
-                      type="text"
+                    <div className="form-row">
+                      <div className="form-group">
+                        <label>City</label>
+                        <input
+                          type="text"
                       name="city"
                       value={formData.city}
                       onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label>ZIP Code</label>
-                    <input
-                      type="text"
+                          required
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label>ZIP Code</label>
+                        <input
+                          type="text"
                       name="zipCode"
                       value={formData.zipCode}
                       onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                </div>
+                          required
+                        />
+                      </div>
+                    </div>
 
                 <button type="submit" className="next-button">
                   Continue to Payment →
-                </button>
-              </form>
-            </div>
-          )}
+                      </button>
+                  </form>
+                </div>
+              )}
 
           {step === 2 && (
-            <div className="checkout-step">
-              <h3>Payment Information</h3>
+                <div className="checkout-step">
+                  <h3>Payment Information</h3>
               <form onSubmit={(e) => { e.preventDefault(); setStep(3); }}>
-                <div className="form-group">
-                  <label>Card Number</label>
-                  <div className="card-input">
+                    <div className="form-group">
+                      <label>Card Number</label>
+                      <div className="card-input">
                     <span className="card-icon">💳</span>
-                    <input
-                      type="text"
+                        <input
+                          type="text"
                       name="cardNumber"
                       value={formData.cardNumber}
                       onChange={handleInputChange}
-                      placeholder="1234 5678 9012 3456"
-                      required
-                    />
-                  </div>
-                </div>
+                          placeholder="1234 5678 9012 3456"
+                          required
+                        />
+                      </div>
+                    </div>
 
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>Expiry Date</label>
-                    <input
-                      type="text"
+                    <div className="form-row">
+                      <div className="form-group">
+                        <label>Expiry Date</label>
+                        <input
+                          type="text"
                       name="expiryDate"
                       value={formData.expiryDate}
                       onChange={handleInputChange}
-                      placeholder="MM/YY"
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label>CVV</label>
-                    <input
-                      type="text"
+                          placeholder="MM/YY"
+                          required
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label>CVV</label>
+                        <input
+                          type="text"
                       name="cvv"
                       value={formData.cvv}
                       onChange={handleInputChange}
-                      placeholder="123"
-                      required
-                    />
-                  </div>
-                </div>
+                          placeholder="123"
+                          required
+                        />
+                      </div>
+                    </div>
 
                 <div className="security-note">
                   <span className="security-icon">🔒</span>
-                  <span>Your payment information is secure and encrypted</span>
-                </div>
+                      <span>Your payment information is secure and encrypted</span>
+                    </div>
 
                 <div className="button-group">
                   <button type="button" className="back-button" onClick={() => setStep(1)}>
                     ← Back
-                  </button>
+                      </button>
                   <button type="submit" className="next-button">
                     Review Order →
-                  </button>
+                      </button>
+                    </div>
+                  </form>
                 </div>
-              </form>
-            </div>
-          )}
+              )}
 
           {step === 3 && (
-            <div className="checkout-step">
+                <div className="checkout-step">
               <h3>Order Review</h3>
               <div className="order-summary">
                 <div className="order-items">

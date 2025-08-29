@@ -31,12 +31,12 @@ const AuthModal = ({ isOpen, onClose, onAuth }) => {
       <div className="auth-modal">
         <button className="close-button" onClick={onClose}>
           ✕
-        </button>
-        
+            </button>
+
         <div className="auth-header">
           <h2>{isLogin ? 'Welcome Back' : 'Create Account'}</h2>
           <p>{isLogin ? 'Sign in to your account' : 'Join our community'}</p>
-        </div>
+            </div>
 
         <form onSubmit={handleSubmit} className="auth-form">
           {!isLogin && (
@@ -53,96 +53,96 @@ const AuthModal = ({ isOpen, onClose, onAuth }) => {
                   required={!isLogin}
                 />
               </div>
-            </div>
-          )}
+              </div>
+            )}
 
-          <div className="form-group">
+                  <div className="form-group">
             <label>Email</label>
-            <div className="input-wrapper">
+                    <div className="input-wrapper">
               <span className="input-icon">📧</span>
-              <input
-                type="email"
+                      <input
+                        type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                placeholder="Enter your email"
-                required
-              />
-            </div>
-          </div>
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+                  </div>
 
-          <div className="form-group">
+                  <div className="form-group">
             <label>Password</label>
-            <div className="input-wrapper">
+                    <div className="input-wrapper">
               <span className="input-icon">🔒</span>
-              <input
-                type={showPassword ? 'text' : 'password'}
+                      <input
+                        type={showPassword ? 'text' : 'password'}
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
-                placeholder="Enter your password"
-                required
-              />
-              <button
-                type="button"
-                className="password-toggle"
-                onClick={() => setShowPassword(!showPassword)}
-              >
+                        placeholder="Enter your password"
+                        required
+                      />
+                      <button
+                        type="button"
+                        className="password-toggle"
+                        onClick={() => setShowPassword(!showPassword)}
+                      >
                 {showPassword ? '🙈' : '👁️'}
-              </button>
-            </div>
-          </div>
+                      </button>
+                    </div>
+                  </div>
 
           {!isLogin && (
             <>
-              <div className="form-group">
+                    <div className="form-group">
                 <label>Phone Number</label>
-                <div className="input-wrapper">
+                      <div className="input-wrapper">
                   <span className="input-icon">📱</span>
-                  <input
+                        <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
                     placeholder="Enter your phone number"
-                  />
-                </div>
-              </div>
+                        />
+                      </div>
+                    </div>
 
-              <div className="form-group">
+                    <div className="form-group">
                 <label>Address</label>
-                <div className="input-wrapper">
+                      <div className="input-wrapper">
                   <span className="input-icon">📍</span>
-                  <input
-                    type="text"
+                        <input
+                          type="text"
                     name="address"
                     value={formData.address}
                     onChange={handleInputChange}
                     placeholder="Enter your address"
-                  />
-                </div>
-              </div>
+                        />
+                      </div>
+                    </div>
             </>
           )}
 
           <button type="submit" className="auth-button">
             {isLogin ? 'Sign In' : 'Create Account'}
-          </button>
+                  </button>
         </form>
 
         <div className="auth-footer">
           <p>
             {isLogin ? "Don't have an account? " : "Already have an account? "}
-            <button
+                    <button
               className="toggle-button"
               onClick={() => setIsLogin(!isLogin)}
-            >
+                    >
               {isLogin ? 'Sign Up' : 'Sign In'}
-            </button>
+                    </button>
           </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
   );
 };
 
